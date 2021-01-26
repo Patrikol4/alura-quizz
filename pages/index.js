@@ -1,9 +1,12 @@
 import styled from 'styled-components'
 import db from '../db.json'
+import QuizLogo from '../src/components/QuizLogo'
 import Widget from '../src/components/Widget'
+import QuizBackground from '../src/components/QuizBackground'
+import Footer from '../src/components/Footer'
+import GitHubCorner from '../src/components/GithubCorner'
 
-
-const BackgroundImage = styled.div`
+const backgroundImage = styled.div`
 background-image: url(${db.bg});
 flex: 1;
 background-size: cover;
@@ -26,8 +29,9 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <BackgroundImage>
+    <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <QuizLogo/>
         <Widget>
           <Widget.Header>
             <h1>Quiz sobre jogos em geral</h1>
@@ -39,12 +43,14 @@ export default function Home() {
 
         <Widget>
           <Widget.Content>
-            <h1>Contato</h1>
-            <p>Entre em contato pelo e-mail : Quiz@quiz.com</p>
+            <h1>Quizes da galera</h1>
+            <p>lorem ipsum dolor sit amet</p>
           </Widget.Content>
         </Widget>
+        <Footer/>
       </QuizContainer>
-    </BackgroundImage>
+      <GitHubCorner projectUrl="https://github.com/Patrikol4" />
+    </QuizBackground>
 
 
   );
