@@ -58,7 +58,7 @@ export default function Home() {
                 onChange={function (infoEvento) {
                   // name = infoEvento.target.value;
                   // eslint-disable-next-line no-const-assign
-                  setName = (infoEvento.target.value);
+                  setName(infoEvento.target.value);
                 }}
                 placeholder="Diz ai seu nome"
               />
